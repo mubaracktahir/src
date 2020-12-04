@@ -1,112 +1,62 @@
-body{ 
-   border: 2px solid #f6f7f8;
-  padding: 100px; 
+.container{
+    width: 320px;
+    height: 320px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
 }
 
-.shine {
-  background: #f6f7f8;
-  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
-  background-repeat: no-repeat;
-  background-size: 800px 104px; 
-  display: inline-block;
-  position: relative; 
-  -webkit-animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards; 
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-name: placeholderShimmer;
-  -webkit-animation-timing-function: linear;
-  }
-
-box {
-  height: 104px;
-  width: 100px;
+.line{
+    height: 20px;
+    margin: 10px;
 }
-
-div {
-  display: inline-flex;
-  flex-direction: column; 
-  margin-left: 25px;
-  margin-top: 15px;
-  vertical-align: top; 
-}
-
-lines {
-  height: 10px;
-  margin-top: 10px;
-  width: 200px; 
-}
-
-photo {
-  display: block!important;
-  width: 325px; 
-  height: 100px; 
-  margin-top: 15px;
-}
-
-@-webkit-keyframes placeholderShimmer {
-  0% {
-    background-position: -468px 0;
-  }
+.box
+{
+    margin: 10px;
+    width: 150px;
+    height: 150px;
   
-  100% {
-    background-position: 468px 0; 
-  }
-}
+}   
 
-body{ 
-    border: 2px solid #f6f7f8;
-   padding: 100px; 
- }
- 
- .shine {
-   background: #f6f7f8;
-   background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
-   background-repeat: no-repeat;
-   background-size: 800px 104px; 
-   display: inline-block;
-   position: relative; 
-   
-   -webkit-animation-duration: 1s;
-   -webkit-animation-fill-mode: forwards; 
-   -webkit-animation-iteration-count: infinite;
-   -webkit-animation-name: placeholderShimmer;
-   -webkit-animation-timing-function: linear;
-   }
- 
- box {
-   height: 104px;
-   width: 100px;
- }
- 
- div {
-   display: inline-flex;
-   flex-direction: column; 
-   margin-left: 25px;
-   margin-top: 15px;
-   vertical-align: top; 
- }
- 
- lines {
-   height: 10px;
-   margin-top: 10px;
-   width: 200px; 
- }
- 
- photo {
-   display: block!important;
-   width: 325px; 
-   height: 100px; 
-   margin-top: 15px;
- }
- 
- @-webkit-keyframes placeholderShimmer {
-   0% {
-     background-position: -468px 0;
-   }
-   
-   100% {
-     background-position: 468px 0; 
-   }
- }
- 
- 
+.box, .line{
+    animation: pulse 1s infinite ease-in-out;
+    -webkit-animation: pulse 1s infinite ease-in-out;
+}
+.container div:nth-child(2){
+    width: 150px;
+}
+.container div:nth-child(3){
+    width: 120px;
+}
+.container div:nth-child(4){
+    width: 130px;
+}
+.container div:nth-child(5){
+    width: 100px;
+}
+.container div:nth-child(6){
+    width: 150px;
+}
+@keyframes pulse
+{
+    0%{
+        background-color: rgba(165, 165, 165, .1);
+    }
+    50%{
+        background-color: rgba(165, 165, 165, .3);
+    }
+    100%{
+        background-color: rgba(165, 165, 165, .1);
+    }
+}
+@-webkit-keyframes pulse
+{
+    0%{
+        background-color: rgba(165, 165, 165, .1);
+    }
+    50%{
+        background-color: rgba(165, 165, 165, .3);
+    }
+    100%{
+        background-color: rgba(165, 165, 165, .1);
+    } 
+}
